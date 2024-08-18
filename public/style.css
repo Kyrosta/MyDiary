@@ -1,0 +1,91 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container Styles */
+#indexContainer, #signupContainer, #entryContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Heading Styles */
+#indexContainer h1, #signupContainer h1, #entryContainer h1 {
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input, textarea {
+    margin: 5px 0;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Message Styles */
+#login-message, #signup-message {
+    margin-top: 10px;
+    color: red;
+}
+
+/* Entry Page Specific Styles */
+#entryContainer textarea {
+    min-height: 500px;
+    max-height: 600px;
+    resize: vertical;
+}
+
+#entryContainer .buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.submit-button, .logout-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+}
+
+.submit-button:hover, .logout-button:hover {
+    background-color: #0056b3;
+}

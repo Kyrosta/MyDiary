@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "username": "admin",
+      "password": "admin"
+    }
+  ],
+  "entries": [
+    {
+      "username": "admin",
+      "content": "Try this new website!",
+      "timestamp": "2024-08-18T17:07:54.337Z"
+    },
+    {
+      "username": "admin",
+      "content": "Very Cool!",
+      "timestamp": "2024-08-18T17:08:00.351Z"
+    }
+  ]
+}

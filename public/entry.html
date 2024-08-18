@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Diary - New Entry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="entryContainer">
+        <h1>Write a New Diary Entry</h1>
+        <form id="entry-form">
+            <textarea id="entry-content" placeholder="Write your entry here..." required></textarea>
+            <div class="buttons-container">
+                <button type="submit" class="submit-button">Submit Entry</button>
+                <a href="index.html">
+                    <button type="button" class="logout-button">Logout</button>
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('entry-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const content = document.getElementById('entry-content').value;
+    
+            fetch('/write-entry', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ content })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Entry submitted successfully!');
+                    window.location.href = 'index.html';
+                } else {
+                    alert('Failed to submit entry');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
